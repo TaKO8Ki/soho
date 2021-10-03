@@ -21,7 +21,8 @@ builtWith = true
 mainSections = ["post"]
 
 ## Set custom theme color.
-# themeColor = "#fc2803"
+themeBackGroundColor = "#fff"
+themeColor = "#000"
 
   [[params.socialIcons]]
   icon = "fa-linkedin"
@@ -36,6 +37,11 @@ mainSections = ["post"]
   [[params.socialIcons]]
   icon = "fa-twitter"
   title = "Twitter"
+  url = "#"
+
+  [[params.socialIcons]]
+  icon = "fa-instagram"
+  title = "instagram"
   url = "#"
 
 [menu]
@@ -59,10 +65,16 @@ mainSections = ["post"]
   url = "/tags/"
 
   [[menu.main]]
-  name = "About"
-  identifier = "about"
+  name = "コンセプト"
+  identifier = "concept"
   weight = 10
-  url = "/about/"
+  url = "/concept/"
+
+  [[menu.main]]
+  name = "ニュース"
+  identifier = "news"
+  weight = 1
+  url = "/news/"
 
 [taxonomies]
 category = "categories"

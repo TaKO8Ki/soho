@@ -1,33 +1,17 @@
 <aside class="sidebar">
   <div class="container">
-    <div class="sidebar-about">
-      {{ with .Site.Params.gravatar }}
-      <div class="author-image">
-        <a href="{{ $.Site.BaseURL }}">
-          <img src="https://www.gravatar.com/avatar/{{md5 .}}?s=200&d=mp" class="img-circle img-headshot center" alt="Gravatar">
-        </a>
-      </div>
-      {{ else }}
-        {{ with .Site.Params.profilePicture }}
-        <div class="author-image">
-          <a href="{{ $.Site.BaseURL }}">
-            <img src="{{ . | relURL }}" class="img-circle img-headshot center" alt="Profile Picture">
-          </a>
-        </div>
-        {{ end }}
-      {{ end }}
+    <!-- <div class="sidebar-about"> -->
+      <!-- <h1>{{ .Site.Title }}</h1> -->
 
-      <h1>{{ .Site.Title }}</h1>
-
-      {{ with .Site.Params.description }}
+      <!-- {{ with .Site.Params.description }}
       <p class="lead">{{.}}</p>
-      {{end}}
-    </div>
+      {{end}} -->
+    <!-- </div> -->
 
     <nav>
       <ul class="sidebar-nav">
         <li>
-          <a href="{{ .Site.BaseURL }}">Home</a>
+          <a href="{{ .Site.BaseURL }}">トップ</a>
         </li>
         {{ range .Site.Menus.main -}}
         <li>
@@ -43,6 +27,8 @@
         <i class="fab {{ $item.icon }}" aria-hidden="true"></i>
       </a>
       {{ end }}
+
+      {{ partial "footer.html" . }}
     </section>
   </div>
 </aside>
